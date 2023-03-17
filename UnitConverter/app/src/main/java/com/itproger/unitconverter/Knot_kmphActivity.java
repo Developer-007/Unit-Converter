@@ -1,0 +1,86 @@
+package com.itproger.unitconverter;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+
+public class Knot_kmphActivity extends AppCompatActivity {
+    TextView tview_unit1, tview_unit2, tview_enter_unit2;
+    EditText eText;
+    View v;
+    RadioGroup radioGroup_knot_kmph;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_knot_kmph);
+    }
+    public void goBack_toSpeed(View v) {
+        Intent intent = new Intent(this, SpeedActivity.class);
+        startActivity(intent);
+    }
+    public void knotTokmph_text(View v) {
+        tview_unit1 = findViewById(R.id.unit_1);
+        tview_unit2 = findViewById(R.id.unit_2);
+        tview_unit1.setText("Узлы:");
+        tview_unit2.setText("Км/ч:");
+    }
+
+    public void kmphToknot_text(View v) {
+        tview_unit1 = findViewById(R.id.unit_1);
+        tview_unit2 = findViewById(R.id.unit_2);
+        tview_unit1.setText("Км/ч:");
+        tview_unit2.setText("Узлы:");
+    }
+    public void countknot_kmph(View viev) {
+        radioGroup_knot_kmph = findViewById(R.id.radio_group_knot_kmph);
+        int checkButtonIndex = radioGroup_knot_kmph.getCheckedRadioButtonId();
+        tview_unit1 = findViewById(R.id.unit_1);
+        tview_unit2 = findViewById(R.id.unit_2);
+        tview_enter_unit2 = findViewById(R.id.enter_unit2);
+        eText = findViewById(R.id.enter_unittext);
+
+        try {
+            float unit1 = Float.parseFloat(eText.getText().toString());
+            float unit2;
+
+
+            switch (checkButtonIndex) {
+                case R.id.knotTokmph:
+                    unit2 = unit1 * 1.852f;
+                    tview_enter_unit2.setText(String.valueOf(unit2));
+                    break;
+                case R.id.kmphToknot:
+                    unit2 = unit1 * 0.54f;
+                    tview_enter_unit2.setText(String.valueOf(unit2));
+                    break;
+            }
+        } catch (Throwable e) {
+            showErrorInfoSq("Вы не ввели значение");
+        }
+
+
+    }
+
+    private void showErrorInfoSq(String text) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Knot_kmphActivity.this);
+        builder.setTitle("Ошибка!")
+                .setMessage(text)
+                .setCancelable(false)
+                .setPositiveButton("ОК", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+                        dialogInterface.cancel();
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+}

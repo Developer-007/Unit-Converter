@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AreaActivity2">
+
+    <RelativeLayout
+        android:id="@+id/top_layer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/violet_1"
+        >
+
+        <TextView
+            android:id="@+id/app_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Конвертер единиц измерения"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="14dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/second_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layer"
+        android:background="@color/cyan_green"
+        >
+        <TextView
+            android:id="@+id/unit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Единицы площади:"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="14dp"
+            />
+
+        <RadioGroup
+            android:id="@+id/radio_group_A"
+            android:layout_below="@+id/unit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/mile2_km2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Кв.миля⇄кв.км"
+                android:textSize="25sp"
+                android:layout_marginStart="25dp"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/acr_ga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Акр⇄Га"
+                android:textSize="25sp"
+                android:layout_marginStart="25dp"/>
+            <RadioButton
+                android:id="@+id/yard2_m2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Кв.ярд⇄кв.м"
+                android:textSize="25sp"
+                android:layout_marginStart="25dp"/>
+            <RadioButton
+                android:id="@+id/foot2_m2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Кв.фут⇄кв.м"
+                android:textSize="25sp"
+                android:layout_marginStart="25dp"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="5dp"
+            android:onClick="goBack_fromArea"
+            android:text="Назад"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/choose_btn2"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="5dp"
+            android:onClick="chooseArea"
+            android:text="Выбрать"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            tools:ignore="TextSizeCheck" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

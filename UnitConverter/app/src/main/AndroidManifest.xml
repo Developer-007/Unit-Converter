@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UnitConverter"
+        tools:targetApi="31">
+        <activity
+            android:name=".Ounce_kg_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Pound_kgActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DegRe_DegCActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DegF_DegCActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Knot_kmphActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mph_kmphActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Pint_l_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Quart_l_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Gallon_l_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".O_barrel_l_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Sqfoot_sqmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Sqyard_sqmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Acre_hectareActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Sqmile_sqkm"
+            android:exported="false" />
+        <activity
+            android:name=".Inch_cmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Foot_mActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Yard_mActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Seamile_KmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mile_KmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TemperatureActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SpeedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VolumeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AreaActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".LengthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

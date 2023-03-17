@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="goBack_fromLength"
+    tools:context=".LengthActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_layer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/violet_1">
+
+        <TextView
+            android:id="@+id/app_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+            android:text="Конвертер единиц измерения"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/second_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layer"
+        android:background="@color/cyan_green">
+
+        <TextView
+            android:id="@+id/unit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="30dp"
+            android:text="Единицы длины:"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/unit_text">
+
+            <RadioButton
+                android:id="@+id/mile_km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:checked="true"
+                android:text="Миля⇄км"
+                android:textSize="25sp" />
+
+            <RadioButton
+                android:id="@+id/seamile_km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:text="Морская миля⇄км"
+                android:textSize="25sp" />
+
+            <RadioButton
+                android:id="@+id/yard_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:text="Ярд⇄м"
+                android:textSize="25sp" />
+
+            <RadioButton
+                android:id="@+id/foot_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:text="Фут⇄м"
+                android:textSize="25sp" />
+
+            <RadioButton
+                android:id="@+id/inch_cm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:text="Дюйм⇄см"
+                android:textSize="25sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+            android:onClick="goBack_fromLength"
+            android:text="Назад"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/choose_btn2"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+            android:onClick="chooseLength"
+            android:text="Выбрать"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            tools:ignore="TextSizeCheck" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

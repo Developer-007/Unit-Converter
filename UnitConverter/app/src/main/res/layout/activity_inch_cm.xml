@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Inch_cmActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_layer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/violet_1"
+        >
+
+        <TextView
+            android:id="@+id/app_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Конвертер единиц измерения"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="14dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/second_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layer"
+        android:background="@color/cyan_green"
+        >
+        <TextView
+            android:id="@+id/unit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Перевести:"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="14dp"
+            />
+
+        <RadioGroup
+            android:id="@+id/radio_group_inch_cm"
+            android:layout_below="@+id/unit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/pinch_cm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:checked="true"
+                android:onClick="inchTocm_text"
+                android:text="Дюймы в см"
+                android:textSize="25sp" />
+
+            <RadioButton
+                android:id="@+id/pcm_inch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:onClick="cmToinch_text"
+                android:text="См в дюймы"
+                android:textSize="25sp" />
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:id="@+id/text_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radio_group_inch_cm"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="horizontal"
+            >
+
+
+            <TextView
+                android:id="@+id/unit_1"
+                android:layout_width="10sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:text="Дюймы:"
+                />
+
+            <TextView
+                android:id="@+id/unit_2"
+                android:layout_width="10sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:text="См:"
+                android:layout_alignParentRight="true"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/enter_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/text_unit">
+
+
+            <EditText
+                android:id="@+id/enter_unittext"
+                android:layout_width="10sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="0" />
+
+            <TextView
+                android:id="@+id/enter_unit2"
+                android:layout_width="10sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textSize="25sp"
+                android:layout_alignParentRight="true"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+            android:onClick="goBack_toLength"
+            android:text="Назад"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/choose_btn2"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+            android:onClick="countInch_Cm"
+            android:text="Перевести"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            tools:ignore="TextSizeCheck" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

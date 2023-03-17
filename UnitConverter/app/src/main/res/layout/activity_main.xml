@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+    <RelativeLayout
+        android:id="@+id/top_layer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/violet_1"
+        >
+
+        <TextView
+            android:id="@+id/app_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+            android:background="@android:color/transparent"
+            android:text="Конвертер единиц"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/second_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layer"
+        android:background="@color/cyan_green"
+        >
+
+        <TextView
+            android:id="@+id/unit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="30dp"
+            android:minHeight="48dp"
+            android:onClick="showDeveloperInfo"
+            android:text="Выберите физическую
+           величину:"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_units"
+            android:layout_below="@+id/unit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Длина"
+                android:textSize="25sp"
+                android:layout_marginStart="25dp"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Площадь"
+                android:textSize="25sp"
+                android:layout_marginStart="25dp"/>
+            <RadioButton
+                android:id="@+id/volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Объем"
+                android:textSize="25sp"
+                android:layout_marginStart="25dp"/>
+            <RadioButton
+                android:id="@+id/speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Скорость"
+                android:textSize="25sp"
+                android:layout_marginStart="25dp"/>
+            <RadioButton
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Температура"
+                android:textSize="25sp"
+                android:layout_marginStart="25dp"/>
+            <RadioButton
+                android:id="@+id/mass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Масса"
+                android:textSize="25sp"
+                android:layout_marginStart="25dp"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/choose_unit"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="10dp"
+            android:onClick="button_clc"
+            android:text="Выбрать"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
